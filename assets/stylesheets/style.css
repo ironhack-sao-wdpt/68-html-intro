@@ -1,0 +1,83 @@
+/* Cascade Style Sheets */
+
+/* Cascata é a prioridade que determinadas regras do CSS têm sobre outras */
+
+/* Seletores: ferramentas pra podermos selecionar tags específica no HTML */
+/* h1 {
+  /* Regra: aplicar regras de estilização à uma tag HTML específica */
+/*  color: red;
+} 
+*/
+
+/* Tipos de seletores */
+
+/* Seletor global (afeta todos os elementos do HTML) */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Por nome de tag */
+
+/* p {
+  font-size: large;
+} */
+
+/* Por id */
+
+/* ATENÇÃO: Um id precisa ÚNICO em TODO o documento HTML. Por consequência, essa regra obrigatoriamente só vai se aplicar à um elemento. Isso é ruim, pois queremos poder reutilizar a maior quantidade regras possível. */
+/* #conteudo-pricipal {
+  margin: 20px;
+} */
+
+.monospace-font {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Por nome de classe */
+.main-title {
+  font-size: 56px;
+  margin-left: 30px;
+}
+
+.container {
+  margin-left: 15px;
+}
+
+.img-default {
+  /* Quando definimos dimensões de imagens, nunca podemos definir as duas dimensões (largura e altura) pois isso vai distorcer a imagem */
+  width: 100%;
+  height: auto; /* A dimensão que não foi customizada deve receber o valor de 'auto' */
+  object-fit: cover;
+}
+
+/* Seletores descendentes */
+
+/* Este seletor vai acessar todas as tags <li> que são filhas de uma tag com classe nav-menu */
+.nav-menu {
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: 1000;
+}
+
+/* Pseudo-seletores e pseudo-elementos */
+
+/* ::after é um pseudo-seletor que seleciona um espaço APÓS o elemento (na direita) */
+.nav-menu li:not(:last-child)::after {
+  content: " |"; /* content cria pseudo-elementos que não fazem do HTML porém são vistos na tela */
+}
+
+.footer {
+  margin-bottom: 50px;
+}
